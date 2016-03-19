@@ -130,3 +130,7 @@ new BloodRemain({
 new Ambulance({
   number: ambulance_num
 }).save();
+
+setTimeout(function() {
+  mongoose.disconnect();
+}, 5000);
