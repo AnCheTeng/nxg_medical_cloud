@@ -16,33 +16,33 @@ router.route('/number/:name')
     DrugRemain.findOne({
       name: name
     }).exec(function(err, result) {
-      response.send(result.number);
+      response.send(result);
     })
   });
 
 router.route('/add/:name/:num')
   .get(parseUrlencoded, function(request, response) {
     var name = request.params.name;
-    var num = request.params.num;
+    var num = parseInt(request.params.num);
     DrugRemain.findOne({
       name: name
     }).exec(function(err, result) {
       result.number = result.number + num;
       result.save();
-      response.send(result.number);
+      response.send(result);
     })
   });
 
 router.route('/minus/:name/:num')
   .get(parseUrlencoded, function(request, response) {
     var name = request.params.name;
-    var num = request.params.num;
+    var num = parseInt(request.params.num);
     DrugRemain.findOne({
       name: name
     }).exec(function(err, result) {
       result.number = result.number - num;
       result.save();
-      response.send(result.number);
+      response.send(result);
     })
   });
 
