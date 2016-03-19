@@ -23,7 +23,7 @@ router.route('/number/:type')
 router.route('/add/:type/:num')
   .get(parseUrlencoded, function(request, response) {
     var type = request.params.type;
-    var num = rparseInt(equest.params.num);
+    var num = parseInt(request.params.num);
     BloodRemain.findOne({
       type: type
     }).exec(function(err, result) {

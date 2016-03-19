@@ -18,21 +18,21 @@ var specialbed_num = 10;
 var ICUbed_num = 5;
 var normalbed_num = 50;
 
-var badpatient_num = 0;
-var goodpatient_num = 0;
+var badpatient_num = 3;
+var goodpatient_num = 10;
 
 var doctor_num = 3;
 var nurse_num = 5;
-var care_num = 5;
+var care_num = 10;
 
 var drug_A_num = 100;
-var drug_B_num = 100;
-var drug_C_num = 100;
+var drug_B_num = 150;
+var drug_C_num = 200;
 
-var A_num = 500;
-var B_num = 500;
+var A_num = 200;
+var B_num = 400;
 var AB_num = 500;
-var O_num = 500;
+var O_num = 300;
 
 var ambulance_num = 3;
 
