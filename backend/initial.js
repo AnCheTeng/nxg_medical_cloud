@@ -131,6 +131,6 @@ new Ambulance({
   number: ambulance_num
 }).save();
 
-setTimeout(function() {
-  mongoose.disconnect();
-}, 8000);
+// setTimeout(function() {
+//   mongoose.disconnect();
+// }, 8000);
