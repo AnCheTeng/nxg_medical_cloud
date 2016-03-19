@@ -52,43 +52,43 @@ new HospitalPhysicalProperty({
 
 new SickbedRemain({
   number: specialbed_num,
-  type: "specialbed"
+  type: "Special"
 }).save();
 
 new SickbedRemain({
   number: ICUbed_num,
-  type: "ICUbed"
+  type: "ICU"
 }).save();
 
 new SickbedRemain({
   number: normalbed_num,
-  type: "normalbed"
+  type: "Normal"
 }).save();
 
 new PatientInfo({
   number: badpatient_num,
-  type: "bad"
+  type: "Good"
 }).save();
 
 new PatientInfo({
   number: goodpatient_num,
-  type: "good"
+  type: "Bad"
 }).save();
 
 new HealthCarePeopleInfo({
   number: doctor_num,
-  type: "doctor"
+  type: "Doctor"
 }).save();
 
 new HealthCarePeopleInfo({
   number: nurse_num,
-  type: "nurse"
+  type: "Nurse"
 }).save();
 
 
 new HealthCarePeopleInfo({
   number: care_num,
-  type: "care"
+  type: "MedicalCare"
 }).save();
 
 

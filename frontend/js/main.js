@@ -4,15 +4,15 @@ $(document).ready(function() {
     $("#location").text("Taipei City");
   });
 
-  $.get("/sickbed/number/specialbed", (response)=>{
+  $.get("/sickbed/number/Special", (response)=>{
     $("#sickbed_o").text(response.number);
   });
 
-  $.get("/patient/number/good", (response)=>{
+  $.get("/patient/number/Good", (response)=>{
     $("#patient_o").text(response.number);
   });
 
-  $.get("/healthcare/number/doctor", (response)=>{
+  $.get("/healthcare/number/Doctor", (response)=>{
     $("#healthcare_o").text(response.number);
   });
 
@@ -27,4 +27,18 @@ $(document).ready(function() {
   $.get("/ambulance/number", (response)=>{
     $("#ambulance_o").text(response.number);
   });
+
+
+  $("select").change(function() {
+    var change = $(this).val();
+    var api = "/"+$(this).data("api")+"/number/"+change;
+    var output = "#"+$(this).data("api")+"_o";
+
+    $.get(api, (response)=>{
+      $(output).text(response.number);
+    })
+  })
+
+
+
 })
