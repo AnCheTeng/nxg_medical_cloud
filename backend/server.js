@@ -33,7 +33,7 @@ app.all('*', function(req, res, next) {
   next();
 });
 
-app.use(express.static('../front_end'));
+app.use(express.static('../frontend'));
 
 app.use('/physical', physical_route);
 app.use('/sickbed', sickbed_route);
